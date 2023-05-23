@@ -1,24 +1,17 @@
-# README
+# DATA BRICK
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Generate model(s)
+2. Add some validation
+3. Populate our Database
 
-Things you may want to cover:
+# APPLICATIVE BRICK
 
-* Ruby version
+1. Route
+2. Controller action
+3. View
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<% unless @pet.errors %>
+  <p><%= @pet.errors.messages %></p>
+<% end %>

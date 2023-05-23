@@ -1,0 +1,13 @@
+<h1>This is <%= @pet.name %></h1>
+
+<img src="https://source.unsplash.com/random?<%= @pet.species %>" alt="<%= @pet.species%> image" width="200">
+
+<p>Address: <%= @pet.address %> </p>
+<p>Species: <%= @pet.species %></p>
+<p>Found: <%= @pet.found_on %></p>
+
+<%= link_to 'See all pets', pets_path %>
+
+<%= link_to 'Edit this pet', edit_pet_path(@pet) %>
+
+<%= link_to 'Adopt pet (delete)', pet_path(@pet), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>

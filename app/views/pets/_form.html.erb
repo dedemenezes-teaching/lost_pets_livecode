@@ -1,0 +1,15 @@
+<%= form_with model: pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :species %>
+  <%= f.select :species, Pet::SPECIES %>
+  <%= f.label :found_on %>
+  <%= f.date_field :found_on %>
+  <% if pet.new_record? %>
+    <%= f.submit 'Report pet' %>
+  <% else %>
+    <%= f.submit 'Update pet' %>
+  <% end %>
+<% end %>
